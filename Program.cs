@@ -68,7 +68,7 @@ namespace Lab3_Misyuro.Kirill_Arrays
 
         void FindNumberInArray()
         {
-            int[] arr = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            int[] arr = new int[10] { 2, 1, 4, 3, 6, 5, 6, 11, 8, 9 };
             Console.Write("Array: ");
             foreach (int i in arr)
             {
@@ -84,7 +84,7 @@ namespace Lab3_Misyuro.Kirill_Arrays
             }
             while (!isNumber);
 
-            int NumberFound = Array.BinarySearch(arr, input);
+            int NumberFound = Array.FindIndex(arr, x=>x==input );
             if (NumberFound > 0)
             {
                 Console.WriteLine("Number {0} found in array at index {1}", input, NumberFound);
